@@ -1,0 +1,8 @@
+# Node y sistema
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.log
+*.tmp

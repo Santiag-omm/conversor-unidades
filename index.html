@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Unidades</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Conversor de Unidades</h1>
+      <p>Convierte Temperatura, Distancia y Peso en un solo lugar.</p>
+    </header>
+
+    <main class="main">
+      <section class="card">
+        <div class="field">
+          <label for="valor">Valor</label>
+          <input id="valor" type="number" step="any" placeholder="Ingresa un número" />
+        </div>
+
+        <div class="field">
+          <label for="categoria">Categoría</label>
+          <select id="categoria">
+            <option value="temperatura">Temperatura</option>
+            <option value="distancia">Distancia</option>
+            <option value="peso">Peso</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="desde">Desde</label>
+          <select id="desde"></select>
+        </div>
+
+        <div class="field">
+          <label for="hasta">Hasta</label>
+          <select id="hasta"></select>
+        </div>
+
+        <div class="actions">
+          <button id="convertir" class="btn">Convertir</button>
+          <button id="limpiar" class="btn secondary">Limpiar</button>
+        </div>
+
+        <div id="resultado" class="resultado">Introduce un valor y selecciona las unidades para ver el resultado.</div>
+      </section>
+
+      <section class="info">
+        <h2>Conversiones disponibles</h2>
+        <ul>
+          <li>Temperatura: Celsius ↔ Fahrenheit ↔ Kelvin</li>
+          <li>Distancia: Metros ↔ Kilómetros ↔ Millas</li>
+          <li>Peso: Gramos ↔ Kilogramos ↔ Libras</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

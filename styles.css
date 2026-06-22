@@ -1,0 +1,143 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(circle at top, #1e293b 0%, #0f172a 55%, #020617 100%);
+}
+
+.app {
+  width: min(980px, 100%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.header p {
+  margin: 10px auto 0;
+  max-width: 720px;
+  color: #94a3b8;
+}
+
+.main {
+  display: grid;
+  gap: 20px;
+}
+
+.card,
+.info {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.35);
+}
+
+.field {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.field label {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+input,
+select {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 14px;
+  padding: 14px 16px;
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 14px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.btn.secondary {
+  background: rgba(148, 163, 184, 0.16);
+  color: #cbd5e1;
+}
+
+.resultado {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.08);
+  min-height: 88px;
+  display: grid;
+  align-items: center;
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+.info h2 {
+  margin-top: 0;
+}
+
+.info ul {
+  padding-left: 20px;
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.info li {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 720px) {
+  .main {
+    grid-template-columns: 1.25fr 0.75fr;
+  }
+}
